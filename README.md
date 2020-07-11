@@ -37,11 +37,11 @@ For the actual problems in the field of fabric defect detection, we have made th
 
 ## Data Preparation
 
-#####TILDA dataset 
+##### TILDA dataset 
 download from [ https://lmb.informatik.uni-freiburg.de/resources/datasets/tilda.en.html](https://lmb.informatik.uni-freiburg.de/resources/datasets/tilda.en.html)
-#####Hong Kong dataset
+##### Hong Kong dataset
 download from [ https://ytngan.wordpress.com/codes/]( https://ytngan.wordpress.com/codes/)
-#####HDAGM2007 dataset
+##### DAGM2007 dataset
 download from [ https://hci.iwr.uni-heidelberg.de/content/weakly-supervised-learningindustrial-optical-inspection]( https://hci.iwr.uni-heidelberg.de/content/weakly-supervised-learningindustrial-optical-inspection)
 
 ## Installation
