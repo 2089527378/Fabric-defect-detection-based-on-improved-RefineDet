@@ -1,4 +1,3 @@
-
 import os
 import shutil
 import cv2
@@ -10,8 +9,9 @@ import matplotlib.patches as patches
 import  matplotlib.pyplot as plt
 from matplotlib.ticker import NullLocator
 
+
 # labelmap= ( 'class1','class2','class3','class4','class5','class6','class7','class8','class9','class10',)
-# labelmap = (  # always index 0
+# labelmap = (
 #     'bn','he','nm','tb','tk','kn')
 labelmap=('e1','e2','e3','e4')
 color =((0,0,255),(0,255,0),(255,0,0),(255,255,0),(255,0,255),(0,255,255),(128,255,0),(255,128,0),(0,128,255),(255,0,128))
