@@ -17,18 +17,21 @@ if sys.version_info[0] == 2:
 else:
     import xml.etree.ElementTree as ET
 
+# VOC_CLASSES = (  # always index 0
+#    'e1','e2','e3','e4')
 VOC_CLASSES = (  # always index 0
-   'e1','e2','e3','e4')
+   'diningtable', 'person', 'bottle', 'boat', 'train', 'bird', 'dog', 'cat', 'tvmonitor', 'cow', 'car', 'sofa', 'horse', 'chair', 'pottedplant', 'bicycle', 'motorbike', 'aeroplane', 'sheep', 'bus')
 # VOC_CLASSES = (  # always index 0
 #      'bn','he','nm','tb','tk','kn')
 # VOC_CLASSES =( 'class1','class2','class3','class4','class5','class6','class7','class8','class9','class10',)
-
+VOC_ROOT = osp.join(HOME, "VOCdevkit/")#VOC07+12 trainval set
+# VOC_ROOT = osp.join(HOME, "VOC2007test/VOCdevkit/") #VOC2007 test set
 
 # note: if you used our download scripts, this should be right
 # VOC_ROOT = osp.join(HOME, "HongKongdatasets/VOCdevkit/")
 # VOC_ROOT = osp.join(HOME, "DAGMdatasets/VOCdevkit/")
 # VOC_ROOT = osp.join(HOME, "HongKongdatasets_test_dataAugment/VOCdevkit/")
-VOC_ROOT = osp.join(HOME, "TILDAdatasets/VOCdevkit/")
+# VOC_ROOT = osp.join(HOME, "TILDAdatasets/VOCdevkit/")
 
 class VOCAnnotationTransform(object):
     """Transforms a VOC annotation into a Tensor of bbox coords and label index
@@ -97,8 +100,8 @@ class VOCDetection(data.Dataset):
     """
 
     def __init__(self, root,
-                 # image_sets=[('2007', 'trainval'), ('2012', 'trainval')],
-                 image_sets=[('2007', 'trainval')],
+                 image_sets=[('2007', 'trainval'), ('2012', 'trainval')],
+                 # image_sets=[('2007', 'trainval')],
                  transform=None, target_transform=VOCAnnotationTransform(),
                  dataset_name='VOC0712'):
         self.root = root

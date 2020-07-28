@@ -51,7 +51,7 @@ def str2bool(v):
 parser = argparse.ArgumentParser(
     description='Single Shot MultiBox Detector Evaluation')
 parser.add_argument('--trained_model',
-                    default='weights/RefineDet320_TILDA_final120000.pth', type=str,
+                    default='weights/RefineDet320_voc0712_final120000.pth', type=str,
                     help='Trained state_dict file path to open')
 parser.add_argument('--save_folder', default='eval/', type=str,
                     help='File path to save results')
@@ -221,7 +221,7 @@ def do_python_eval(output_dir='output', use_07=True):
     print('~~~~~~~~')
     print('')
     plt.title("P-R Curve mAP:{:.3f}".format(np.mean(aps)))
-    plt.savefig('TILDA_prcurse.jpg')
+    plt.savefig('VOC_prcurse.jpg')
 
 
 

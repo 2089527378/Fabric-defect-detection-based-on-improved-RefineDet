@@ -31,7 +31,7 @@ class RefineDet_novel_cam(nn.Module):
         super(RefineDet_novel_cam, self).__init__()
         self.phase = phase
         self.num_classes = num_classes
-        self.cfg = (coco_refinedet, voc_refinedet)[num_classes == 5]
+        self.cfg = (coco_refinedet, voc_refinedet)[num_classes == 21]
         self.priorbox = PriorBox(self.cfg[str(size)])
         with torch.no_grad():
             self.priors = self.priorbox.forward()

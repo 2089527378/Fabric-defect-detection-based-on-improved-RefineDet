@@ -347,7 +347,7 @@ def train():
         if iteration != 0 and iteration % 5000 == 0:
             print('Saving state, iter:', iteration)
             torch.save(refinedet_net.state_dict(), args.save_folder
-                    + '/RefineDet{}_TILDA_{}_.pth'.format(args.input_size,
+                    + '/RefineDet{}_voc0712_{}_.pth'.format(args.input_size,
             repr(iteration)))
 
         if iteration%500==0:
@@ -360,14 +360,14 @@ def train():
         #     torch.save(refinedet_net.state_dict(), args.save_folder
         #              + '/RefineDet{}_{}_TILDA_sam_best_.pth'.format(args.input_size, args.dataset))
     torch.save(refinedet_net.state_dict(), args.save_folder
-            + '/RefineDet{}_TILDA_final120000.pth'.format(args.input_size))
+            + '/RefineDet{}_voc0712_final120000.pth'.format(args.input_size))
     plt.plot(pltx,plty,label='Total loss')
     plt.plot(pltx,pltz,label='CA-ARM loss')
     plt.plot(pltx,pltm,label='ODM loss')
     plt.xlabel("iteraton")
     plt.ylabel('total loss')
     plt.legend()
-    plt.savefig('TILDA loss.jpg')
+    plt.savefig('VOC loss.jpg')
 
 
 def adjust_learning_rate(optimizer, gamma, step):
